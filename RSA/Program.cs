@@ -40,21 +40,21 @@ namespace DSA
             //Хеш таблица состоит из 20 бит, через консоль вводимые
             string text = Encoding.UTF8.GetString(HashValue);
             Console.WriteLine(text);
-            // The value to hold the signed value.
+            // Подписываем хеш-таблицу с помощью закрытого ключа
             byte[] SignedHashValue = DSASignHash(HashValue, privateKeyInfo, "SHA1");
             text = Encoding.UTF8.GetString(SignedHashValue);
 
             Console.WriteLine(text);
-            // Verify the hash and display the results.
+            // Сверяем подписанную неподписанную Хеш-таблицу с помощью открытого ключа
             bool verified = DSAVerifyHash(HashValue, SignedHashValue, publicKeyInfo, "SHA1");
 
             if (verified)
             {
-                Console.WriteLine("The hash value was verified.");
+                Console.WriteLine("Значение хеш-таблицы совпало");
             }
             else
             {
-                Console.WriteLine("The hash value was not verified.");
+                Console.WriteLine("Значение хеш-таблицы не совпало");
             }
         }
         catch (ArgumentNullException e)
@@ -74,20 +74,19 @@ namespace DSA
 
         try
         {
-            // Create a new instance of DSACryptoServiceProvider.
+            // Создаем новыый экземпляр класса
             using (DSACryptoServiceProvider DSA = new DSACryptoServiceProvider())
             {
-                // Import the key information.
+                // Импортируем ключи, в данном случае закрытый ключ
                 DSA.ImportParameters(DSAKeyInfo);
 
-                // Create an DSASignatureFormatter object and pass it the
-                // DSACryptoServiceProvider to transfer the private key.
+                // Создаем объект класса DSASignatureFormatter и передаем ему DSACryptoServiceProvider закрытый ключ
                 DSASignatureFormatter DSAFormatter = new DSASignatureFormatter(DSA);
 
-                // Set the hash algorithm to the passed value.
+                // Устанавливаем алгоритм шифрования
                 DSAFormatter.SetHashAlgorithm(HashAlg);
 
-                // Create a signature for HashValue and return it.
+                // Создаем подпись для хеш-таблицы и возвращаем ее значение
                 sig = DSAFormatter.CreateSignature(HashToSign);
             }
         }
@@ -106,20 +105,19 @@ namespace DSA
 
         try
         {
-            // Create a new instance of DSACryptoServiceProvider.
+            // Создаем новый экземпляр класса DSACryptoServiceProvider.
             using (DSACryptoServiceProvider DSA = new DSACryptoServiceProvider())
             {
-                // Import the key information.
+                // Импортируем ключи
                 DSA.ImportParameters(DSAKeyInfo);
 
-                // Create an DSASignatureDeformatter object and pass it the
-                // DSACryptoServiceProvider to transfer the private key.
+                //Создаем объект класса DSASignatureFormatter и передаем ему DSACryptoServiceProvider закрытый ключ
                 DSASignatureDeformatter DSADeformatter = new DSASignatureDeformatter(DSA);
 
-                // Set the hash algorithm to the passed value.
+                // Устанавливаем алгоритм шифрования
                 DSADeformatter.SetHashAlgorithm(HashAlg);
 
-                // Verify signature and return the result.
+                // Сверяем подписи и возвращаем результат
                 verified = DSADeformatter.VerifySignature(HashValue, SignedHashValue);
             }
         }
