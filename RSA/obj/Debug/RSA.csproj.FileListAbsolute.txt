@@ -1,0 +1,6 @@
+c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\bin\Debug\RSA.exe.config
+c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\obj\Debug\RSA.csprojResolveAssemblyReference.cache
+c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\bin\Debug\RSA.exe
+c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\bin\Debug\RSA.pdb
+c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\obj\Debug\RSA.exe
+c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\obj\Debug\RSA.pdb
