@@ -3,3 +3,6 @@ c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\bin\D
 c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\bin\Debug\RSA.pdb
 c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\obj\Debug\RSA.exe
 c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\obj\Debug\RSA.pdb
+C:\Users\Алкаш Влад\Documents\Visual Studio 2012\Projects\DSA\DSA\RSA\bin\Debug\RSA.exe.config
+C:\Users\Алкаш Влад\Documents\Visual Studio 2012\Projects\DSA\DSA\RSA\obj\Debug\RSA.exe
+C:\Users\Алкаш Влад\Documents\Visual Studio 2012\Projects\DSA\DSA\RSA\obj\Debug\RSA.pdb

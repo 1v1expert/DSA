@@ -27,19 +27,18 @@ namespace DSA
             DSAParameters privateKeyInfo;
             DSAParameters publicKeyInfo;
 
-            // Create a new instance of DSACryptoServiceProvider to generate
-            // a new key pair.
+            //Создаем пару ключей(открытый и закрытый)
             using (DSACryptoServiceProvider DSA = new DSACryptoServiceProvider())
             {
                 privateKeyInfo = DSA.ExportParameters(true);
                 publicKeyInfo = DSA.ExportParameters(false);
             }
+            // Хеш таблица
             byte[] HashValue = new byte[20]; 
             string TextIn = Console.ReadLine();
             HashValue = Convert.FromBase64String(Convert.ToBase64String(Encoding.UTF8.GetBytes(TextIn)));
             //Хеш таблица состоит из 20 бит, через консоль вводимые
             string text = Encoding.UTF8.GetString(HashValue);
-
             Console.WriteLine(text);
             // The value to hold the signed value.
             byte[] SignedHashValue = DSASignHash(HashValue, privateKeyInfo, "SHA1");
@@ -66,7 +65,8 @@ namespace DSA
     }
 
       
-//--------------------------------------------------------------------------
+//-------------------------------------------------------------------------
+        // Шифруем закрытым ключем Хеш-таблицу
     public static byte[] DSASignHash(byte[] HashToSign, DSAParameters DSAKeyInfo,
         string HashAlg)
     {
