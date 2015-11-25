@@ -6,3 +6,6 @@ c:\users\алкаш влад\documents\visual studio 2012\Projects\RSA\RSA\obj\D
 C:\Users\Алкаш Влад\Documents\Visual Studio 2012\Projects\DSA\DSA\RSA\bin\Debug\RSA.exe.config
 C:\Users\Алкаш Влад\Documents\Visual Studio 2012\Projects\DSA\DSA\RSA\obj\Debug\RSA.exe
 C:\Users\Алкаш Влад\Documents\Visual Studio 2012\Projects\DSA\DSA\RSA\obj\Debug\RSA.pdb
+C:\Users\Алкаш Влад\Documents\Visual Studio 2012\Projects\DSA\DSA\RSA\bin\Debug\RSA.exe
+C:\Users\Алкаш Влад\Documents\Visual Studio 2012\Projects\DSA\DSA\RSA\bin\Debug\RSA.pdb
+C:\Users\Алкаш Влад\Documents\Visual Studio 2012\Projects\DSA\DSA\RSA\obj\Debug\DSA.csprojResolveAssemblyReference.cache

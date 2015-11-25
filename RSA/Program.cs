@@ -34,7 +34,8 @@ namespace DSA
                 publicKeyInfo = DSA.ExportParameters(false);
             }
             // Хеш таблица
-            byte[] HashValue = new byte[20]; 
+            byte[] HashValue = new byte[20];
+            Console.WriteLine("Введите хеш-таблица размером 20 символов: ");
             string TextIn = Console.ReadLine();
             HashValue = Convert.FromBase64String(Convert.ToBase64String(Encoding.UTF8.GetBytes(TextIn)));
             //Хеш таблица состоит из 20 бит, через консоль вводимые
